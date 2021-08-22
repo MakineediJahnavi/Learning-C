@@ -144,3 +144,23 @@ int main()
 	return 0;
 }
 
+/* Program to obtain octal equivalent of an integer */
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int i=0,n1,n2,rem,oct=0;
+	printf("Enter any integer : ");
+	scanf("%d",&n1);
+	n2=n1;
+	while (n1>0)
+	{
+		rem=n1%8;
+		n1=n1/8;
+		oct=oct+rem*pow(10,i);
+		i++;
+	}
+	printf("Octal equivalent of %d is %d",n2,oct);
+	return 0;
+}
+
