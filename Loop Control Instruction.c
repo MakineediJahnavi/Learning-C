@@ -164,3 +164,37 @@ int main()
 	return 0;
 }
 
+/* Program to find the range of a set of numbers */
+#include<stdio.h>
+int main()
+{
+	int n,num,i=0,range,big,small;
+	printf("How many numbers are there in the set : ");
+	scanf("%d",&n);
+	while (n>0)
+	{
+		printf("Enter number : ");
+		scanf("%d",&num);
+		if (i==0)
+		{
+			big=small=num;
+			i=1;
+		}
+		else 
+		{
+			if(num>big)
+				big=num;
+			if(num<small)
+				small=num;
+		}
+		n--;
+	}
+	if(small<0)
+		range=big+small;
+	if(small>0)
+		range=big-small;
+	if(range<0)
+		range=range*(-1);
+	printf("Range of the entered set of numbers is %d",range);
+	return 0;
+ }
