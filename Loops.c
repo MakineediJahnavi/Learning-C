@@ -51,3 +51,55 @@ int main()
 	}
 	return 0;
 }
+
+/* Program to print multiplication table */
+#include<stdio.h>
+int main()
+{
+int n,i;
+printf("Enter any number : ");
+scanf("%d",&n);
+for(i=1; i<=10; i++)
+{
+	printf("%d * %d = %d\n",n,i,n*i);
+}
+return 0;
+}
+
+/* Program to print intelligence table */
+#include<stdio.h>
+int main()
+{
+	int y;
+	float i,x;
+	for(y=1; y<=6; y++)
+	{
+		for(x=5.5; x<=12.5; x+=0.5)
+		{
+			i=2+(y+0.5*x);
+			printf("i=%f y=%d x=%f\n",i,y,x);
+		}
+	}
+	return 0;
+}
+
+/* Program to read 10 setsof p, r, n & q and calculate the corresponding a's */
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int q,n,p,i;
+	float r,a;
+	for(i=1; i<=10; i++)
+	{
+		printf("Enter the values of p, r, n & q : ");
+		scanf("%d%f%d%d",&p,&n,&r,&q);
+		a=p*pow(1+r/q,n*q);
+		printf("a=%f\n",a);
+	}
+	return 0;
+}
+
+
+
+
